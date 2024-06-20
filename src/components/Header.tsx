@@ -4,9 +4,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdCancel } from 'react-icons/md';
+import CartButton from './CartButton';
+import { useCart } from '@/context/UpdateCartContext';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [totalCartItem, setTotalCartItem] = useState(0);
+  const { updateCart, setUpdateCart } = useCart();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { cartItems, setCartItems } = useCart();
+  const router = useRouter();
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -38,6 +46,8 @@ const Header = () => {
         </Link>
 
         <div className='right flex gap-8 items-center'>
+          <CartButton totalCartItem={totalCartItem} cartItems={cartItems} />
+
           <Link className='nav_login' href={'/sign-in'}>
             Login
           </Link>

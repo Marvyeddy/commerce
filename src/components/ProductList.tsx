@@ -27,7 +27,7 @@ const ProductList = ({ item }: ItemProps) => {
               fill
               className='object-contain cursor-pointer'
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              loading='lazy'
+              priority
             />
           </div>
           <div className='rounded-b-md px-2'>
