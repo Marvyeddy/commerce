@@ -25,8 +25,8 @@ const ProductDetail = ({ item }: ItemProps) => {
           alt=''
           width={250}
           height={250}
-          loading='lazy'
           className='object-contain bg-slate-300 rounded-lg'
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         />
       </div>
       <div className='flex flex-col gap-1 sm:text-left text-center'>
