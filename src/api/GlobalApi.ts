@@ -20,7 +20,15 @@ const getCategories = () =>
     return resp.data.data;
   });
 
+const categoryFilter = (category: any) =>
+  axiosClient
+    .get(`/products?filters[categories][name][$in]=${category}&populate=*`)
+    .then((resp) => {
+      return resp.data.data;
+    });
+
 export default {
   getProducts,
   getCategories,
+  categoryFilter,
 };
