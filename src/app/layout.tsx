@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CartProvider } from '@/context/UpdateCartContext';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,14 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <main className='min-h-screen relative'>
-          <CartProvider>
-            <Header />
-            {children}
-            <Footer />
-          </CartProvider>
-        </main>
+      <body
+        className={`${inter.className} relative min-h-[100vh] overflow-x-hidden`}
+      >
+        <CartProvider>
+          <Header />
+          {children}
+          <Toaster />
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

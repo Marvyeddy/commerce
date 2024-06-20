@@ -58,7 +58,7 @@ const Header = () => {
         </div>
         {/* mobile nav */}
         <div
-          className={`fixed h-[100vh] top-0 left-0 w-[100%] bg-slate-200 flex flex-col transition-all ease-in-out md:hidden
+          className={`fixed h-[200vh] top-0 bottom-0 left-0 w-[100%] bg-slate-200 flex flex-col transition-all ease-in-out md:hidden
           ${isOpen ? `translate-x-0` : `-translate-x-full`}`}
         >
           <MdCancel
