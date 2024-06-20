@@ -1,5 +1,4 @@
 import GlobalApi from '@/api/GlobalApi';
-import Image from 'next/image';
 import { Product } from '../../types';
 import ProductList from './ProductList';
 

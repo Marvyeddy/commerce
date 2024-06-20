@@ -1,8 +1,8 @@
 import GlobalApi from '@/api/GlobalApi';
 import Category from '@/components/Category';
 import React from 'react';
-import { Product } from '../../../../../types';
 import ProductList from '@/components/ProductList';
+import { Product } from '../../../../../types';
 
 const productCategory = async ({ params }: any) => {
   const productList: Product[] = await GlobalApi.categoryFilter(
