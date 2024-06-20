@@ -1,4 +1,5 @@
 import Category from '@/components/Category';
+import Contact from '@/components/Contact';
 import Hero from '@/components/Hero';
 import Products from '@/components/Products';
 import Image from 'next/image';
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Category />
       <Products />
+      <Contact />
     </div>
   );
 }
