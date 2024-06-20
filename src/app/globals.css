@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .category_ctn {
+    @apply relative w-[100px] h-[100px] bg-stone-700/80 rounded-md mx-auto hover:scale-110 transition-all ease-in-out;
+  }
+}
