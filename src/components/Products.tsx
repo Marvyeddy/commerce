@@ -5,17 +5,8 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { Product } from '../../types';
 
-const Products = () => {
-  const [product, setproduct] = useState<Product[]>([]);
-
-  useEffect(() => {
-    const products = async () => {
-      const productList = await GlobalApi.getProducts();
-      setproduct(productList);
-    };
-
-    products();
-  }, []);
+const Products = async () => {
+  const product: Product[] = await GlobalApi.getProducts();
 
   return (
     <div>
