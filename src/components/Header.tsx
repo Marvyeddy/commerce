@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <div className='bg-black text-white sticky top-0 z-10 py-4 px-7'>
+    <div className='bg-black text-white sticky top-0 z-10 py-4 px-7 w-screen'>
       <div className='flex justify-between max-w-screen-lg mx-auto items-center'>
         <div className='md:flex gap-5 hidden'>
           <div className='hover:underline underline-offset-4'>
