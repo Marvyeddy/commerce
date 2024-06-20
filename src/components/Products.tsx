@@ -1,8 +1,5 @@
-'use client';
-
 import GlobalApi from '@/api/GlobalApi';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
 import { Product } from '../../types';
 
 const Products = async () => {

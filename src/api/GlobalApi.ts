@@ -15,6 +15,12 @@ const getProducts = () =>
     return resp.data.data;
   });
 
+const getCategories = () =>
+  axiosClient.get('/categories?populate=*').then((resp) => {
+    return resp.data.data;
+  });
+
 export default {
   getProducts,
+  getCategories,
 };
