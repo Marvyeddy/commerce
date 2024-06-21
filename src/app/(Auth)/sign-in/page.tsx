@@ -30,6 +30,7 @@ const signIn = () => {
         window.sessionStorage.setItem('user', JSON.stringify(resp.data.user));
         window.sessionStorage.setItem('jwt', resp.data.jwt);
         router.push('/');
+        router.refresh();
         toast({
           title: 'Signed In successfully',
         });
@@ -46,7 +47,7 @@ const signIn = () => {
 
   return (
     <div className='absolute bg-white top-0 w-full z-50 h-screen'>
-      <div className='w-[500px] mx-auto flex flex-col items-center bg-slate-200 mt-20 p-7 gap-1'>
+      <div className='w-[350px] sm:w-[500px] mx-auto flex flex-col items-center bg-slate-200 mt-20 p-7 gap-1'>
         <h2 className='font-bold text-xl'>
           MARV <span className='text-md font-bold text-red-400'>STORE</span>
         </h2>
@@ -55,7 +56,7 @@ const signIn = () => {
           Fill the details below to sign-in.
         </p>
 
-        <div className='w-[400px] flex flex-col gap-5 mt-3'>
+        <div className='sm:w-[400px] w-[300px] flex flex-col gap-5 mt-3'>
           <Input
             placeholder='Email'
             value={email}
@@ -73,7 +74,7 @@ const signIn = () => {
           </Button>
         </div>
 
-        <div className='flex gap-2 mt-3'>
+        <div className='sm:flex gap-2 mt-3'>
           <p>Don't have an account?</p>
           <Link
             href={'/create-account'}

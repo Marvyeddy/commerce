@@ -30,6 +30,7 @@ const createAccount = () => {
         window.sessionStorage.setItem('user', JSON.stringify(resp.data.user));
         window.sessionStorage.setItem('jwt', resp.data.jwt);
         router.push('/');
+        router.refresh();
         toast({
           title: 'Account created successfully',
         });
@@ -44,8 +45,8 @@ const createAccount = () => {
   };
 
   return (
-    <div className='absolute bg-white top-0 w-full z-50'>
-      <div className='w-[500px] mx-auto flex flex-col items-center bg-slate-200 mt-20 p-7 gap-1  rounded-md'>
+    <div className='absolute bg-white top-0 w-full z-50 h-screen'>
+      <div className='w-[350px] sm:w-[500px] mx-auto flex flex-col items-center bg-slate-200 mt-20 p-7 gap-1'>
         <h2 className='font-bold text-xl'>
           MARV <span className='text-md font-bold text-red-400'>STORE</span>
         </h2>
@@ -54,7 +55,7 @@ const createAccount = () => {
           Fill the details below to create an account.
         </p>
 
-        <div className='w-[400px] flex flex-col gap-5 mt-3'>
+        <div className='sm:w-[400px] w-[300px] flex flex-col gap-5 mt-3'>
           <Input
             placeholder='Username'
             value={userName}
@@ -74,21 +75,17 @@ const createAccount = () => {
             required
           />
           <Button
-            onClick={onCreateAccount}
+            onClick={createAccount}
             disabled={!(userName && email && password)}
           >
-            {loader ? (
-              <AiOutlineLoading className='animate-spin' />
-            ) : (
-              'Create Account'
-            )}
+            {loader ? <AiOutlineLoading className='animate-spin' /> : 'Sign-in'}
           </Button>
         </div>
 
-        <div className='flex gap-2 mt-3'>
-          <p>Already have an account?</p>
+        <div className='sm:flex gap-2 mt-3'>
+          <p>Don't have an account?</p>
           <Link href={'/sign-in'} className='text-blue-600 hover:underline'>
-            Click to Login
+            Click to Sign in
           </Link>
         </div>
       </div>

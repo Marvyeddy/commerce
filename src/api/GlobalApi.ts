@@ -28,11 +28,15 @@ const categoryFilter = (category: any) =>
     });
 
 const addToCart = (data: object, jwt: any) =>
-  axios.post('/user-carts', data, {
-    headers: {
-      Authorization: `Bearer ${jwt}`,
-    },
-  });
+  axios.post(
+    'https://e-commerce-backend-n7j5.onrender.com/api/user-carts',
+    data,
+    {
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    }
+  );
 
 const registerUser = (username: any, email: any, password: any) =>
   axiosClient.post('/auth/local/register', {
