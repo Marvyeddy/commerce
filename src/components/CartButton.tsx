@@ -42,7 +42,7 @@ const CartButton = ({ totalCartItem, cartItems, onDelete }: CartButton) => {
           {totalCartItem}
         </span>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className='px-3 border border-black'>
         <SheetDescription></SheetDescription>
         <SheetTitle>
           {cartItems.length === 0 ? (

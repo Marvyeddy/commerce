@@ -30,10 +30,10 @@ const signIn = () => {
         window.sessionStorage.setItem('user', JSON.stringify(resp.data.user));
         window.sessionStorage.setItem('jwt', resp.data.jwt);
         router.push('/');
-        router.refresh();
         toast({
           title: 'Signed In successfully',
         });
+        router.refresh();
         setLoader(false);
       })
       .catch((error: any) => {
