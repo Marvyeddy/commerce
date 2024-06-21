@@ -11,7 +11,10 @@ const Contact = () => {
           Every Information Given to us is protected with priority
         </p>
         <div>
-          <input type='text' className='bg-stone-300 rounded-md py-1 px-2' />
+          <input
+            type='text'
+            className='bg-stone-300 rounded-md py-1 px-2 w-[200px]'
+          />
           <button className='ml-1 bg-gradient-to-tr from-purple-700 to-pink-600 text-white px-3 py-1 rounded-md'>
             Subscribe
           </button>
