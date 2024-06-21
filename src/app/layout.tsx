@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} relative min-h-[100vh] overflow-x-hidden`}
+        className={`${inter.className} relative min-h-[100vh] overflow-x-hidden w-full bg-black`}
       >
         <CartProvider>
           <Header />
