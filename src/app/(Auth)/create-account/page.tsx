@@ -75,7 +75,7 @@ const createAccount = () => {
             required
           />
           <Button
-            onClick={createAccount}
+            onClick={onCreateAccount}
             disabled={!(userName && email && password)}
           >
             {loader ? <AiOutlineLoading className='animate-spin' /> : 'Sign-in'}

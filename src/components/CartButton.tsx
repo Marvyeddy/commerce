@@ -20,7 +20,7 @@ import Link from 'next/link';
 interface CartButton {
   totalCartItem: number;
   cartItems: Product[];
-  onDelete?: (id: number) => void;
+  onDelete: (id: number) => void;
 }
 
 const CartButton = ({ totalCartItem, cartItems, onDelete }: CartButton) => {
@@ -81,6 +81,7 @@ const CartButton = ({ totalCartItem, cartItems, onDelete }: CartButton) => {
                   <MdDeleteForever
                     size={25}
                     className='cursor-pointer hover:text-gray-300'
+                    onClick={() => onDelete(item.id)}
                   />
                 </div>
               ))}
