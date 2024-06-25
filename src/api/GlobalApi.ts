@@ -39,11 +39,14 @@ const addToCart = (data: object, jwt: any) =>
   );
 
 const registerUser = (username: any, email: any, password: any) =>
-  axiosClient.post('/auth/local/register', {
-    username: username,
-    email: email,
-    password: password,
-  });
+  axios.post(
+    'https://e-commerce-backend-n7j5.onrender.com/api/auth/local/register',
+    {
+      username: username,
+      email: email,
+      password: password,
+    }
+  );
 
 const signInUser = (email: any, password: any) =>
   axios.post('https://e-commerce-backend-n7j5.onrender.com/api/auth/local', {
